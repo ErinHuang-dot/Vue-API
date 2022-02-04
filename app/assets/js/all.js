@@ -1,3 +1,8 @@
-$(function() {
-  console.log('Hello Bootstrap5');
-});
+const url = 'https://vue3-course-api.hexschool.io/v2';
+const path = 'erinhuang-lab';
+
+
+
+
+
+
