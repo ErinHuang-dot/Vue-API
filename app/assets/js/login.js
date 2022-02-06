@@ -15,10 +15,14 @@ const loginApp = Vue.createApp ({
             .then((res) => {
                 // 將 token 存在 cookie
                 const { token, expired } = res.data;
-                document.cookie = `erinToken=${token}; expires=${new Date(expired)}GMT;`;
+                document.cookie = `userToken=${token}; expires=${new Date(expired)}GMT;`;
                 // 跳轉頁面
                 window.alert(`${res.data.message}，即將進入商品頁面`);
-                window.location.href
+                window.location.href = '/update-product.html';
+            })
+            .catch((error) => {
+                window.alert(`登入失敗，請重新輸入一次`);
+                console.dir(error);
             })
         }
     }
