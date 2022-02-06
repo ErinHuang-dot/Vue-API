@@ -24,7 +24,7 @@ const updateApp = Vue.createApp ({
             })            
             .catch((error) => {
                 window.alert(`驗證失敗，請重新登入`);
-                window.location.href = '/index.html';                
+                window.location.href = 'index.html';                
             })
         },
         getProducts() {
