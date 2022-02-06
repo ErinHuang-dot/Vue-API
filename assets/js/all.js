@@ -24,7 +24,7 @@ var loginApp = Vue.createApp({
         document.cookie = "userToken=".concat(token, "; expires=").concat(new Date(expired), "GMT;"); // 跳轉頁面
 
         window.alert("".concat(res.data.message, "\uFF0C\u5373\u5C07\u9032\u5165\u5546\u54C1\u9801\u9762"));
-        window.location.href = '/update-product.html';
+        window.location.href = 'update-product.html';
       })["catch"](function (error) {
         window.alert("\u767B\u5165\u5931\u6557\uFF0C\u8ACB\u91CD\u65B0\u8F38\u5165\u4E00\u6B21");
         console.dir(error);
@@ -65,7 +65,7 @@ var updateApp = Vue.createApp({
         _this.getProducts();
       })["catch"](function (error) {
         window.alert("\u9A57\u8B49\u5931\u6557\uFF0C\u8ACB\u91CD\u65B0\u767B\u5165");
-        window.location.href = '/index.html';
+        window.location.href = 'index.html';
       });
     },
     getProducts: function getProducts() {
